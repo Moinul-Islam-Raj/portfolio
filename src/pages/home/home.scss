@@ -1,0 +1,20 @@
+.home {
+  font-family: Arial, Helvetica, sans-serif;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  color: #000;
+}
+
+.theme-dark {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  .item {
+    background-color: black;
+    color: white;
+    button {
+      border-color: rgb(63, 62, 62);
+    }
+  }
+}

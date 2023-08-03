@@ -1,0 +1,72 @@
+.item {
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 15px;
+  width: 300px;
+  height: 450px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: 200px;
+    width: 300px;
+    background-size: cover;
+    background-color: #000;
+  }
+
+  div {
+    padding: 10px 25px;
+    height: 230px;
+    h3 {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    hr {
+      border: none;
+      height: 0.5px;
+      background-color: lightgrey;
+      margin: 0;
+    }
+    p {
+      color: grey;
+      overflow-y: scroll;
+      height: 125px;
+    }
+    ::-webkit-scrollbar {
+      color: #000;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 6px 22px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      border-bottom: 2px solid lightgray;
+      border-left: 3px solid lightgray;
+      cursor: pointer;
+      position: absolute;
+      bottom: 10px;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.websites {
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  margin-right: 5vw;
+  font-weight: 500;
+  text-align: end;
+}

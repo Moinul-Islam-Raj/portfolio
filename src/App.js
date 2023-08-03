@@ -1,14 +1,18 @@
-import { Route, Routes } from 'react-routs-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <Routs>
-      <Route src='/' element={<Home />}/>
-      <Route src='/about' element={<About />}/>
-    </Routs>
+  <>
+    <Navbar />
+    <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/about' element={<About />}/>
+    </Routes>
+  </>
   );
 }
 

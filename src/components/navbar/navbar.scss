@@ -1,0 +1,62 @@
+.navbar {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: rebeccapurple;
+  position: sticky;
+  top: 0;
+  .left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    span {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-self: center;
+      img {
+        background-color: #fff; //temp
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      span {
+        color: white;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    form {
+      * {
+        padding: 5px 10px;
+        font-size: 16px;
+        border: none;
+      }
+
+      input {
+        border-radius: 10px 0px 0px 10px;
+      }
+
+      button {
+        border-radius: 0px 10px 10px 0px;
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    span {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

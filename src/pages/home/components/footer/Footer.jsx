@@ -23,8 +23,8 @@ const Footer = () => {
             </li>
           </ul>
         </ul>
-        <h6>tahosan habib</h6>
       </footer>
+      <h6>tahosan habib</h6>
     </div>
   );
 };

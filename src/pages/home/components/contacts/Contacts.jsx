@@ -7,7 +7,11 @@ const Contacts = () => {
     <>
       <h2>mail me</h2>
       <div className="contacts">
-        <form action={"mailto:" + owner?.email} method="GET">
+        <form
+          action={"mailto:" + owner?.email}
+          method="GET"
+          encType="text/plain"
+        >
           <input name="subject" placeholder="Subject" required type="text" />
           <textarea name="body" placeholder="Enter Text..."></textarea>
           <div>

@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
 import Searchbar from "./Searchbar";
 import { owner } from "../../data/owner";
 
 const Navbar = () => {
+  const loc = useLocation();
+  const isHome =
+    loc.pathname.endsWith("/portfolio") || loc.pathname.endsWith("/portfolio/");
+  const isAbout =
+    loc.pathname.endsWith("/about") || loc.pathname.endsWith("/about/");
   const [dark, setDark] = useState(
     localStorage.getItem("dark-theme") === "true" ? true : false
   );
@@ -16,7 +21,7 @@ const Navbar = () => {
   }, [dark]);
 
   return (
-    <div className={"navbar " + (dark ? "theme-dark-nav" : "")}>
+    <nav className={"navbar " + (dark ? "theme-dark-nav" : "")}>
       <div>
         <div className="left">
           <span>
@@ -50,16 +55,24 @@ const Navbar = () => {
             }}
             onClick={() => setDark((d) => !d)}
           />
-          <Link to="/portfolio/">
+          <Link
+            className={isHome ? "active" : ""}
+            style={{ textDecoration: "none" }}
+            to="/portfolio/"
+          >
             <span>Home</span>
           </Link>
-          <Link to="/portfolio/about/">
+          <Link
+            className={isAbout ? "active" : ""}
+            style={{ textDecoration: "none" }}
+            to="/portfolio/about/"
+          >
             <span>About</span>
           </Link>
         </div>
       </div>
       <Searchbar className={"mob"} />
-    </div>
+    </nav>
   );
 };
 

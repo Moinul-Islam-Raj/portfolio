@@ -9,7 +9,7 @@ const Websites = () => {
       <h2>Projects</h2>
       <hr style={{ width: "90vw" }} />
       <div className="websites">
-        {Projects.map((p, i) => {
+        {Projects?.map((p, i) => {
           return (
             <WebItem
               key={i}

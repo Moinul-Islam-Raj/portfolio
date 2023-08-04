@@ -1,10 +1,23 @@
-import React from 'react'
-import './contacts.scss'
+import React from "react";
+import "./contacts.scss";
+import { owner } from "../../../../data/owner";
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
-  )
-}
+    <>
+      <h2>mail me</h2>
+      <div className="contacts">
+        <form action={"mailto:" + owner?.email} method="GET">
+          <input name="subject" placeholder="Subject" required type="text" />
+          <textarea name="body" placeholder="Enter Text..."></textarea>
+          <div>
+            <input type="submit" value={"Mail"} />
+            <input type="reset" value={"Reset"} />
+          </div>
+        </form>
+      </div>
+    </>
+  );
+};
 
-export default Contacts
+export default Contacts;

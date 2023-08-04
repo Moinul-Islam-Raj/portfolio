@@ -1,0 +1,21 @@
+.footer {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    ul {
+      ul {
+        font-family: cursive;
+        li {
+          a {
+            color: darkcyan;
+          }
+          a:visited {
+            color: darkgreen;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,75 +1,116 @@
-.navbar {
-  font-family: sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  padding: 10px 20px;
-  background-color: rebeccapurple;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  .left {
-    display: flex;
-
-    gap: 15px;
-    align-items: center;
-    span {
+@media only screen and (max-width: 670px) {
+  .navbar {
+    form {
+      display: none;
+    }
+    form.mob {
+      display: inline;
+      width: 100%;
       display: flex;
-      gap: 5px;
+      align-items: center;
       justify-content: center;
-      align-self: center;
-      img {
-        background-color: #fff; //temp
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
+      margin-top: 5px;
+      input,
+      button {
+        border-bottom: 1px solid lightgray;
       }
-
-      span {
-        color: white;
+      input {
+        width: 70%;
       }
     }
-    form {
-      * {
-        padding: 5px 10px;
-        font-size: 16px;
-        border: none;
-      }
+  }
+  .home,
+  .about {
+    height: calc(100vh - 34px - 70px);
+  }
+}
+@media only screen and (min-width: 671px) {
+  .navbar {
+    form.mob {
+      display: none;
+    }
+  }
+}
 
-      input {
-        border-radius: 10px 0px 0px 10px;
-      }
+.navbar {
+  background: white;
+  div {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px 10px;
+    background-color: rebeccapurple;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
-      button {
-        border-radius: 0px 10px 10px 0px;
-        background-color: purple;
+    .left {
+      display: flex;
+
+      gap: 15px;
+      align-items: center;
+      span {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-self: center;
+        img {
+          background-color: #fff; //temp
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        span {
+          color: white;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      span {
         color: white;
+        text-decoration: none;
         cursor: pointer;
       }
     }
   }
+  form {
+    * {
+      padding: 5px 10px;
+      font-size: 16px;
+      border: none;
+    }
 
-  .right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    span {
+    input {
+      border-radius: 10px 0px 0px 10px;
+    }
+
+    button {
+      border-radius: 0px 10px 10px 0px;
+      background-color: purple;
       color: white;
-      text-decoration: none;
       cursor: pointer;
     }
   }
 }
 
 .theme-dark-nav {
-  background-color: black;
-  color: white;
+  background: rgb(29, 29, 29);
+  div {
+    background-color: black;
+    color: white;
+  }
   input {
     background-color: rgb(29, 29, 29);
     color: white;
   }
-  .left form button {
+  form button {
     background-color: rgb(39, 39, 39);
   }
 }

@@ -1,19 +1,13 @@
 import React from "react";
 import "./intro.scss";
+import { introData } from "../../../../data/intro";
 
 const Intro = () => {
   return (
     <div className="intro">
       <div>
-        <h1>Moinul Islam Raj</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis,
-          in. Ratione exercitationem repudiandae itaque, cumque delectus, beatae
-          ullam blanditiis rerum amet quibusdam pariatur repellendus quod velit
-          facere et. Distinctio sapiente eligendi officia molestiae suscipit
-          aliquid minus voluptatum, nam explicabo non? Incidunt neque ut dolorum
-          laborum?
-        </p>
+        <h1>{introData?.heading}</h1>
+        <p>{introData?.details}</p>
       </div>
     </div>
   );

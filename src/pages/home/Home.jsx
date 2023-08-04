@@ -6,8 +6,9 @@ import Contacts from "./components/contacts/Contacts";
 import Websites from "./components/websites/Websites";
 
 const Home = () => {
+  let theme = localStorage.getItem("dark-theme") === "true" ? "theme-dark" : "";
   return (
-    <div className="home">
+    <div className={"home " + theme}>
       <Intro />
       <Websites />
       <Contacts />

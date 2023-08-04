@@ -17,4 +17,31 @@
       border-color: rgb(63, 62, 62);
     }
   }
+  input,
+  textarea {
+    color: white;
+  }
+
+  .contacts {
+    div {
+      :first-child {
+        color: lime;
+        border: 1px solid lime;
+      }
+      :last-child {
+        color: red;
+        border: 1px solid red;
+      }
+    }
+  }
+
+  .footer {
+    color: white;
+    a {
+      color: cyan;
+    }
+    a:visited {
+      color: lime;
+    }
+  }
 }
